@@ -1,0 +1,15 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div id="search">
+  <label>Longitute</label>
+  <input type="text" placeholder="Longitute" [(ngModel)]="long">
+  <label>Latitude</label>
+  <input type="text" placeholder="Latitude" [(ngModel)]="lat">
+  <button (click)="getLocation()">Find Location</button>
+</div>
+<div id="showmap"
+   style="height: 500px;"
+   leaflet
+   [leafletOptions]="options"
+   [leafletLayersControl]="layersControl"
+   (leafletMapReady)="onMapReady($event)">
+</div>
